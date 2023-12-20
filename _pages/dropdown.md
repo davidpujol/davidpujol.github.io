@@ -1,10 +1,10 @@
 ---
 layout: page
-title: submenus
+title: projects
 nav: true
 nav_order: 7
 dropdown: true
 children:
     - title: SADA
-      permalink: /sada_project/
+      permalink: sada_project.md
 ---
