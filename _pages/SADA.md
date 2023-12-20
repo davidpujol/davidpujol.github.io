@@ -10,8 +10,8 @@ horizontal: false
 
 <!-- pages/projects.md -->
 <div class="authors" style="text-align: center;">
-  <h2>David Pujol-Perich, Albert Clapés, and Sergio Escalera</h2>
-  <h2>University of Barcelona and Computer Vision Center, Spain</h2>
+  <h4>David Pujol-Perich, Albert Clapés, and Sergio Escalera</h4>
+  <h4>University of Barcelona and Computer Vision Center, Spain</h4>
 </div>
 
 <div class="projects">
@@ -27,8 +27,8 @@ horizontal: false
 
   <h3>Proposing a new set of benchmarking setups</h3>
   <p>The current landscape lacks suitable benchmarks to evaluate methodologies in sparse detection for TAL. Existing benchmarks don't cover sparse detection or the simultaneous intersection of labels, crucial aspects in real-world video understanding. To address this inadequacy, we propose a comprehensive suite of 6 new benchmarks based on the EpicKitchens100 dataset. These benchmarks examine appearance and acquisition domain shifts, providing a nuanced evaluation of methodologies in handling real-world scenarios. Our proposed benchmarks aim to fill this gap, enabling a more accurate assessment of models' adaptability to diverse and challenging domains.</p>
-<div class="image-caption" style="text-align: center; font-size: 80%;">
-  <img src="/assets/img/sada/benchmarks.png" alt="New benchmarks"
+<div class="image-caption" style="text-align: center; font-size: 50%;">
+  <img src="/assets/img/sada/benchmarks.png" alt="New benchmarks">
 </div>
   <h2>Code</h2>
   <p>The implementation of this project is publicly available <a href="https://github.com/davidpujol/SADA">here</a>.</p>
