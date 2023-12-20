@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+The manuscript of my first PhD publication is now publicly available. 
