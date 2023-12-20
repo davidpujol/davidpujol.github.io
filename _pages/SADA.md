@@ -10,8 +10,8 @@ horizontal: false
 
 <!-- pages/projects.md -->
 <div class="authors" style="text-align: center;">
-  <p>David Pujol-Perich, Albert Clapés, and Sergio Escalera</p>
-  <p>University of Barcelona and Computer Vision Center, Spain</p>
+  <h2>David Pujol-Perich, Albert Clapés, and Sergio Escalera</h2>
+  <h2>University of Barcelona and Computer Vision Center, Spain</h2>
 </div>
 
 <div class="projects">
@@ -21,12 +21,15 @@ horizontal: false
   <h2>Overview</h2>
   <h3>Addressing the problem of feature-misalignment with SADA loss</h3>
   <p>Our work tackles the inherent challenges in Temporal Action Localization (TAL) within video understanding. TAL involves identifying actions in videos, yet variability in appearance and acquisition creates confusion between similar actions. Traditional supervised methods struggle with unseen data variations, resulting in performance declines. Our approach, Unsupervised Domain Adaptation (UDA), aims to bridge this gap by leveraging unlabelled data. However, existing methodologies align domain distributions globally, leading to feature misalignment. Our proposed adversarial loss overcomes this limitation by aligning each action's distribution across both domains, mitigating feature misalignment and enhancing performance.</p>
-  <img src="/assets/img/sada/sada_loss.png" alt="SADA loss"> <!-- Add the path to your image -->
+<div class="image-caption" style="text-align: center; font-size: 80%;">
+  <img src="/assets/img/sada/sada_loss.png" alt="SADA loss">
+</div>
 
   <h3>Proposing a new set of benchmarking setups</h3>
   <p>The current landscape lacks suitable benchmarks to evaluate methodologies in sparse detection for TAL. Existing benchmarks don't cover sparse detection or the simultaneous intersection of labels, crucial aspects in real-world video understanding. To address this inadequacy, we propose a comprehensive suite of 6 new benchmarks based on the EpicKitchens100 dataset. These benchmarks examine appearance and acquisition domain shifts, providing a nuanced evaluation of methodologies in handling real-world scenarios. Our proposed benchmarks aim to fill this gap, enabling a more accurate assessment of models' adaptability to diverse and challenging domains.</p>
-  <img src="/assets/img/sada/benchmarks.png" alt="New benchmarks"> <!-- Add the path to your image -->
-
+<div class="image-caption" style="text-align: center; font-size: 80%;">
+  <img src="/assets/img/sada/benchmarks.png" alt="New benchmarks"
+</div>
   <h2>Code</h2>
   <p>The implementation of this project is publicly available <a href="https://github.com/davidpujol/SADA">here</a>.</p>
 

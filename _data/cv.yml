@@ -24,8 +24,7 @@
       institution: Polytechnic University of Catalonia, Barcelona, Spain
       year: 2020 - 2022
       description:
-        - Description 1.
-        - Description 2.
+        - Master degree in research and innovation in informatics, with a focus on advanced computing.
     - title: Bachelors degree
       institution: Eidgenössische Technische Hochschule Zürich, Zürich, Switzerland
       year: 2019 - 2020
@@ -35,8 +34,7 @@
       institution: Polytechnic University of Catalonia, Barcelona, Spain
       year: 2016 - 2020
       description:
-        - Description 1.
-        - Description 2.
+        - Bachelors degree in Computer Science.
 
 - title: Experience
   type: time_table
