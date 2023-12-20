@@ -6,5 +6,5 @@ nav_order: 7
 dropdown: true
 children:
     - title: SADA
-      permalink: /SADA/
+      permalink: /sada/
 ---
