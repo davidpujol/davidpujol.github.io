@@ -2,28 +2,38 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: David Pujol Perich
     - name: Date of Birth
-      value: 14th March 1879
+      value: 7th January 1998
     - name: Languages
-      value: English, German
+      value: English, Catalan, Spanish, German
 
 - title: Education
   type: time_table
   contents:
     - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+      institution: University of Barcelona, Barcelona, Spain
+      year: 2022 - 2025 (expected)
+    - title: Masters degree
+      institution: École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland
+      year: 2021 - 2022
+      description:
+        - Carried out the last year of the masters degree.
+        - Wrote the master thesis at "LIONS" lab under the supervision of Prof. Volkan Cevher.
+    - title: Masters degree
+      institution: Polytechnic University of Catalonia, Barcelona, Spain
+      year: 2020 - 2022
       description:
         - Description 1.
         - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+    - title: Bachelors degree
+      institution: Eidgenössische Technische Hochschule Zürich, Zürich, Switzerland
+      year: 2019 - 2020
+      description:
+        - Carried out an academic stay during 6 months.
+    - title: Bachelors degree
+      institution: Polytechnic University of Catalonia, Barcelona, Spain
+      year: 2016 - 2020
       description:
         - Description 1.
         - Description 2.
@@ -31,53 +41,34 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Machine Learning Research Assistant
+      institution: École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland
+      year: 2021 - 2022
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Worked on devising efficient attention mechanisms
+    - title: Machine Learning Researcher
+      institution: Barcelona Neural Networking Center, Barcelona, Spain
+      year: 2020 - 2021
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+        - Developed a novel framework for fast prototyping of Graph Neural Networks, called IGNNITION, which became a European Project (https://ignnition.net).
+        - Explored the interpretability of GNNs.
+        - Proposed a novel GNN-based Intrusion Detection System
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2021
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
+        - 3rd prize in the Student Research Competition organized by SIGCOMM '21 (sponsored by Microsoft).
+    - year: 2020
       items: 
-        - Max Planck Medal
+        - Awarded as the second-best Bachelor Thesis of my faculty.
+    - year: 2020 - 2021
+      items: 
+        - Recepient of the scholarship "Beca d'iniciació a la recerca".
+    - year: 2019
+      items: 
+        - 1st prize in RareHacks with a chatbot to help patients with pediatric cancer.
 
 - title: Academic Interests
   type: nested_list
@@ -94,4 +85,4 @@
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Climbing, Reading, Cinema.
