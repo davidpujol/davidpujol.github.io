@@ -1,6 +1,6 @@
 ---
 layout: page
-title: SADA: Semantic adversarial unsupervised domain adaptation for Temporal Action Localization
+title: SADA:Semantic adversarial unsupervised domain adaptation for Temporal Action Localization
 permalink: /sada/
 description: A growing collection of your cool projects.
 nav: true
