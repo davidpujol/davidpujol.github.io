@@ -2,7 +2,7 @@
 layout: page
 title: SADA: Semantic adversarial unsupervised domain adaptation for Temporal Action Localization
 permalink: /sada/
-nav: false
+nav: true
 nav_order: 2
 horizontal: false
 ---
