@@ -13,7 +13,7 @@
   contents:
     - title: PhD
       institution: University of Barcelona, Barcelona, Spain
-      year: 2022 - 2025 (expected)
+      year: 2022 - 2025
     - title: Masters degree
       institution: École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland
       year: 2021 - 2022
@@ -69,18 +69,6 @@
     - year: 2019
       items: 
         - 1st prize in RareHacks with a chatbot to help patients with pediatric cancer.
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
 
 - title: Other Interests
   type: list
