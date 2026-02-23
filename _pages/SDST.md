@@ -51,7 +51,7 @@ horizontal: false
   </div>
 
   <div class="figure-box">
-    
+    <img src="/assets/img/sdst/sdst_efficiency.png" alt="SDST efficiency">
     <div class="figure-caption">Our Sparse-Dense Side-Tuner enables efficient Parameter-Efficient Fine-Tuning (PEFT) for large-scale video temporal grounding models.</div>
   </div>
 
@@ -70,7 +70,7 @@ horizontal: false
   </p>
 
   <div class="figure-box">
-    <img src="/assets/img/sdst/architecture.png" alt="SDST architecture">
+    <img src="/assets/img/sdst/sdst_architecture.png" alt="SDST architecture">
     <div class="figure-caption">Architecture of the Sparse-Dense Side-Tuner: By decoupling the sparse global context from dense temporal refinement, SDST achieves significant efficiency gains over full fine-tuning.</div>
   </div>
 
@@ -78,11 +78,6 @@ horizontal: false
   <p class="content-text">
     Evaluation on benchmarks like <strong>Charades-STA</strong> and <strong>ActivityNet Captions</strong> demonstrates that the Sparse-Dense Side-Tuner matches or exceeds the performance of fully fine-tuned models. More importantly, it shows remarkable scalability in terms of memory, time and parameters, allowing for the deployment of VTG systems on hardware with limited resources.
   </p>
-  
-  <div class="figure-box">
-    <img src="/assets/img/sdst/sdst_efficiency.png" alt="SDST efficiency">
-    <div class="figure-caption">Performance versus number of parameters showing the efficiency gains of our proposed method.</div>
-  </div>
 
   <h2 id="bibliography" class="section-header">Bibliography</h2>
   <pre><code>@inproceedings{pujolperich2025sparse,

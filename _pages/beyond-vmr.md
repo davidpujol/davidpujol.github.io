@@ -47,7 +47,7 @@ horizontal: false
   </div>
 
   <div class="figure-box">
-    
+    <img src="/assets/img/beyond_vmr/motivation.png" alt="Difference between caption-based and search-based queries">
     <div class="figure-caption">We identify a significant domain gap between the descriptive captions used in VMR training and the actual search patterns of real users.</div>
   </div>
 
@@ -62,10 +62,6 @@ In this work, we investigate the degradation of existing VMR methods, particular
   <p class="content-text">
     Standard VMR benchmarks like EpicKitchens or Charades use captions that describe every visual detail (e.g., <i>"The person picks up a silver spoon with their right hand from the wooden table"</i>). In contrast, search logs reveal that humans often use minimal, under-specified queries (e.g., <i>"taking a spoon"</i>). Our analysis shows that VMR performance drops by up to 40% when moving from captions to these realistic search distributions.
   </p>
-    <div class="figure-box">
-    <img src="/assets/img/beyond_vmr/motivation.png" alt="Difference between caption-based and search-based queries">
-    <div class="figure-caption">Illustration of the main differences between caption-based queries and more realistic search-based ones. </div>
-  </div>
 
   <h2 class="section-header">Automated Under-specification Pipeline</h2>
   <p class="content-text">
