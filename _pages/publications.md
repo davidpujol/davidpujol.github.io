@@ -14,7 +14,7 @@ nav_order: 1
 </div>
 
 
-<div class="publications">
+<div class="publications2">
 
   <div class="row" style="margin-bottom: 30px;">
     <div class="col-sm-3">
