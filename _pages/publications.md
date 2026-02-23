@@ -2,14 +2,14 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Selected peer-reviewed conference and journal papers.
+description: 
 nav: true
 nav_order: 1
 ---
 
 <div class="publications">
 
-  <div class="row" style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+  <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
     <div class="col-sm-3">
       <img src="{{ '/assets/img/publication_preview/beyond_vmr.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="CVPR 2026">
     </div>
@@ -25,7 +25,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="row" style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+  <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
     <div class="col-sm-3">
       <img src="{{ '/assets/img/publication_preview/sparse_dense.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICCV 2025">
     </div>
@@ -39,7 +39,7 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="row" style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+  <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
     <div class="col-sm-3">
       <img src="{{ '/assets/img/publication_preview/sada.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="WACV 2025">
     </div>
@@ -54,9 +54,9 @@ nav_order: 1
     </div>
   </div>
 
-  <div class="row" style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+  <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
     <div class="col-sm-3">
-      <img src="{{ '/assets/img/publication_preview/efficient_attention.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICLR 2024">
+      <img src="{{ '/assets/img/publication_preview/topological_attention.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICLR 2024">
     </div>
     <div class="col-sm-9">
       <div class="title font-weight-bold">Topological-Aware Attention for Scalable Transformers</div>
@@ -68,21 +68,32 @@ nav_order: 1
     </div>
   </div>
 
-  <h3 class="mt-4">Earlier Work & Journals</h3>
-  
-  <div class="row" style="margin-bottom: 15px;">
-    <div class="col-sm-12">
-      <span class="font-weight-bold">IGNNITION: Bridging the Gap Between Graph Neural Networks and Networking Systems</span><br>
-      <strong>David Pujol-Perich</strong>, J. Suárez-Varela, et al. | <em>IEEE Network Magazine</em>, 2021.
-      <a href="https://ieeexplore.ieee.org/document/9653655" class="ml-2">[Paper]</a>
-      <a href="https://ignnition.org/" class="ml-2">[Project Page]</a>
+  <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
+    <div class="col-sm-3">
+      <img src="{{ '/assets/img/publication_preview/ignnition.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="IEEE Network 2021">
+    </div>
+    <div class="col-sm-9">
+      <div class="title font-weight-bold">IGNNITION: Bridging the Gap Between Graph Neural Networks and Networking Systems</div>
+      <div class="author"><strong>David Pujol-Perich</strong>, José Suárez-Varela, Albert Cabellos-Aparicio, Pere Barlet-Ros</div>
+      <div class="periodical"><em>IEEE Network Magazine</em>, 2021</div>
+      <div class="links">
+        <a href="https://ignnition.org/" class="btn btn-sm z-depth-0" role="button">Project Page</a>
+        <a href="https://ieeexplore.ieee.org/document/9653655" class="btn btn-sm z-depth-0" role="button">Paper</a>
+      </div>
     </div>
   </div>
 
-  <div class="row" style="margin-bottom: 15px;">
-    <div class="col-sm-12">
-      <span class="font-weight-bold">Unveiling the potential of Graph Neural Networks for robust Intrusion Detection</span><br>
-      <strong>David Pujol-Perich</strong>, J. Suárez-Varela, A. Cabellos-Aparicio, P. Barlet-Ros | <em>WAIN</em>, 2021.
+  <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
+    <div class="col-sm-3">
+      <img src="{{ '/assets/img/publication_preview/gnn_ids.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="WAIN 2021">
+    </div>
+    <div class="col-sm-9">
+      <div class="title font-weight-bold">Unveiling the potential of Graph Neural Networks for robust Intrusion Detection</div>
+      <div class="author"><strong>David Pujol-Perich</strong>, José Suárez-Varela, Albert Cabellos-Aparicio, Pere Barlet-Ros</div>
+      <div class="periodical"><em>Workshop on AI in Networks and Distributed Systems (WAIN)</em>, 2021</div>
+      <div class="links">
+        <a href="https://arxiv.org/abs/..." class="btn btn-sm z-depth-0" role="button">Paper</a>
+      </div>
     </div>
   </div>
 

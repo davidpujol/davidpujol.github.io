@@ -7,4 +7,6 @@ dropdown: true
 children:
     - title: SADA
       permalink: /sada/
+    - title: Beyond caption-based queries
+      permalink: /beyond_caption_based_queries/
 ---
