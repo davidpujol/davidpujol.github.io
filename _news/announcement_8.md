@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Attended EEML summer school! 🇷🇸
+Attended [EEML summer school](https://www.eeml.eu/)! 🇷🇸

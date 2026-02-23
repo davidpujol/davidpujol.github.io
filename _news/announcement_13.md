@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Carried out a 1-year stay at EPFL as part of my Master's degree.
+Carried out a 1-year stay at [EPFL](https://www.epfl.ch/about/) as part of my Master's degree. 🇨🇭

@@ -70,18 +70,18 @@ horizontal: false
   </p>
 
   <div class="figure-box">
-    
+    <img src="/assets/img/sdst/architecture.png" alt="SDST architecture">
     <div class="figure-caption">Architecture of the Sparse-Dense Side-Tuner: By decoupling the sparse global context from dense temporal refinement, SDST achieves significant efficiency gains over full fine-tuning.</div>
   </div>
 
   <h2 class="section-header">Performance and Scalability</h2>
   <p class="content-text">
-    Evaluation on benchmarks like <strong>Charades-STA</strong> and <strong>ActivityNet Captions</strong> demonstrates that the Sparse-Dense Side-Tuner matches or exceeds the performance of fully fine-tuned models. More importantly, it shows remarkable scalability, allowing for the deployment of VTG systems on hardware with limited GPU memory.
+    Evaluation on benchmarks like <strong>Charades-STA</strong> and <strong>ActivityNet Captions</strong> demonstrates that the Sparse-Dense Side-Tuner matches or exceeds the performance of fully fine-tuned models. More importantly, it shows remarkable scalability in terms of memory, time and parameters, allowing for the deployment of VTG systems on hardware with limited resources.
   </p>
   
   <div class="figure-box">
-    
-    <div class="figure-caption">Inference speed and parameter count comparison showing the efficiency gains of our proposed method.</div>
+    <img src="/assets/img/sdst/sdst_efficiency.png" alt="SDST efficiency">
+    <div class="figure-caption">Performance versus number of parameters showing the efficiency gains of our proposed method.</div>
   </div>
 
   <h2 id="bibliography" class="section-header">Bibliography</h2>

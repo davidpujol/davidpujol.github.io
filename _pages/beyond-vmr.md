@@ -62,13 +62,17 @@ In this work, we investigate the degradation of existing VMR methods, particular
   <p class="content-text">
     Standard VMR benchmarks like EpicKitchens or Charades use captions that describe every visual detail (e.g., <i>"The person picks up a silver spoon with their right hand from the wooden table"</i>). In contrast, search logs reveal that humans often use minimal, under-specified queries (e.g., <i>"taking a spoon"</i>). Our analysis shows that VMR performance drops by up to 40% when moving from captions to these realistic search distributions.
   </p>
+    <div class="figure-box">
+    <img src="/assets/img/beyond_vmr/motivation.png" alt="Difference between caption-based and search-based queries">
+    <div class="figure-caption">Illustration of the main differences between caption-based queries and more realistic search-based ones. </div>
+  </div>
 
   <h2 class="section-header">Automated Under-specification Pipeline</h2>
   <p class="content-text">
     To simulate realistic user behavior without manual re-annotation, we propose an <strong>automated under-specification pipeline</strong>. By leveraging dependency parsing and LLM-driven pruning, we systematically remove visually biased modifiers (color, material, specific spatial relations) while preserving the core action-object intent.
   </p>
   <div class="figure-box">
-    
+    <img src="/assets/img/beyond_vmr/pipeline.png" alt="Under-specification pipeline">
     <div class="figure-caption">Our pipeline reduces caption complexity to match the linguistic distribution of real-world search logs.</div>
   </div>
 
@@ -90,11 +94,6 @@ In this work, we investigate the degradation of existing VMR methods, particular
     Combined, these modifications—<strong>-SA+QD</strong>—effectively double the number of active decoder queries in some cases, significantly improving retrieval performance on under-specified search queries.
   </p>
 
-  <div class="figure-box">
-    
-    <div class="figure-caption">Architectural changes to the DETR decoder to prevent query collapse and increase query diversity.</div>
-  </div>
-
   <h2 class="section-header">Qualitative Results</h2>
   <p class="content-text">
 Our qualitative analysis on the HD-EPIC-S2 and YC2-S benchmarks demonstrates that standard models like CG-DETR often fail to retrieve all relevant segments for under-specified queries because they only activate a few queries.
@@ -102,8 +101,9 @@ Our qualitative analysis on the HD-EPIC-S2 and YC2-S benchmarks demonstrates tha
 - **Improved Retrieval:** By removing self-attention and adding query dropout, our model activates a larger number of diverse queries, leading to significantly better coverage and localization of all valid video segments corresponding to a general search query like "Wash grapes" or "Add ingredients".
 +1  </p>
   <div class="figure-box">
-    
-    <div class="figure-caption">Comparison of localized moments between caption-based and search-based queries.</div>
+    <img src="/assets/img/beyond_vmr/qualitative_results.png" alt="Qualitative results for HD-EPIC-S1 and HD-EPIC-S3">
+
+    <div class="figure-caption">Comparison of localized moments between caption-based and search-based queries for HD-EPIC-S1 and HD-EPIC-S3.</div>
   </div>
 
   <h2 id="bibliography" class="section-header">Bibliography</h2>
