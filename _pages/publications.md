@@ -27,7 +27,7 @@ nav_order: 1
 
   <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
     <div class="col-sm-3">
-      <img src="{{ '/assets/img/publication_preview/sparse_dense.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICCV 2025">
+      <img src="{{ '/assets/img/publication_preview/sdst.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICCV 2025">
     </div>
     <div class="col-sm-9">
       <div class="title font-weight-bold">Sparse-Dense Side-Tuner for Efficient Video Temporal Grounding</div>
@@ -56,7 +56,7 @@ nav_order: 1
 
   <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
     <div class="col-sm-3">
-      <img src="{{ '/assets/img/publication_preview/topological_attention.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICLR 2024">
+      <img src="{{ '/assets/img/publication_preview/cellular.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICLR 2024">
     </div>
     <div class="col-sm-9">
       <div class="title font-weight-bold">Higher-order molecular learning: The cellular transformer</div>
@@ -85,7 +85,7 @@ nav_order: 1
 
   <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
     <div class="col-sm-3">
-      <img src="{{ '/assets/img/publication_preview/gnn_ids.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="WAIN 2021">
+      <img src="{{ '/assets/img/publication_preview/unveiling.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="WAIN 2021">
     </div>
     <div class="col-sm-9">
       <div class="title font-weight-bold">Unveiling the potential of Graph Neural Networks for robust Intrusion Detection</div>
