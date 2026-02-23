@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One paper accepted at the ITU Journal!
+One paper accepted at the ITU Journal! :tada:

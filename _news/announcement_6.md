@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-One paper accepted at CVPR 2026.
+One paper accepted at CVPR 2026! :tada:
 

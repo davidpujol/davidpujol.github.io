@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One paper accepted at the IEEE Network Magazine!
+One paper accepted at the IEEE Network Magazine! :tada:

@@ -31,11 +31,10 @@ horizontal: false
   <div class="project-header">
     <h1 class="project-title">Beyond Caption-Based Queries for Video Moment Retrieval</h1>
     <div class="authors">
-      <strong>David Pujol-Perich</strong><sup>1*</sup>, Albert Clapés<sup>1*</sup>, Dima Damen<sup>2</sup>, Sergio Escalera<sup>1</sup>, Michael Wray<sup>2</sup>
+      <strong>David Pujol-Perich</strong><sup>1</sup>, Albert Clapés<sup>1</sup>, Dima Damen<sup>2</sup>, Sergio Escalera<sup>1</sup>, Michael Wray<sup>2</sup>
     </div>
     <div class="affiliations">
       <sup>1</sup>University of Barcelona &nbsp;&nbsp; <sup>2</sup>University of Bristol
-      <br><small>*Equal Contribution</small>
     </div>
     <div class="venue" style="font-weight: 600; font-size: 1.3rem; color: #b31b1b; margin-top: 10px;">CVPR 2026</div>
     
@@ -54,12 +53,14 @@ horizontal: false
 
   <h2 class="section-header">Abstract</h2>
   <p class="content-text">
-    Current Video Moment Retrieval (VMR) models are primarily trained on videos paired with captions written by annotators after watching the video. This process induces a "visual bias," leading to overly descriptive and fine-grained queries that differ significantly from the more general search queries users employ in practice. In this work, we investigate the degradation of existing VMR methods when evaluated on realistic search queries. We introduce an automated under-specification pipeline to generate three new benchmarks—<strong>HD-EPIC-S1/S2, ANC-S, and YC2-S</strong>—demonstrating that current architectural designs struggle to bridge the gap between high-level intent and visual grounding.
+Current Video Moment Retrieval (VMR) models are trained on videos paired with captions, which are written by annotators after watching the videos. These captions are used as textual queries---which we term caption-based queries. This annotation process induces a visual bias, leading to overly descriptive and fine-grained queries, which significantly differ from the more general search queries that users are likely to employ in practice.
+
+In this work, we investigate the degradation of existing VMR methods, particularly of DETR architectures, when trained on caption-based queries but evaluated on search queries. For this, we introduce three benchmarks by modifying the textual queries in three public VMR datasets---i.e., HD-EPIC, YouCook2 and ActivityNet-Captions. Our analysis reveals two key generalization challenges: (i) A language gap, arising from the linguistic under-specification of search-queries, and (ii) a multi-moment gap, caused by the shift from single moment to multi-moment queries. We also identify a critical issue in these architectures---an active decoder-query collapse---as a primary cause of the poor generalization to multi-moment instances. We mitigate this issue with architectural modifications that effectively increase the number of active decoder queries. Extensive experiments demonstrate that our approach improves performance on search queries by up to 14.82%, and up to 21.83% mAp_m on multi-moment search queries.
   </p>
 
   <h2 class="section-header">Captions vs. Realistic Search Queries</h2>
   <p class="content-text">
-    Standard VMR benchmarks like EpicKitchens or Charades use captions that describe every visual detail (e.g., <i>"The person picks up a silver spoon with their right hand from the wooden table"</i>). In contrast, search logs reveal that humans use minimal, under-specified queries (e.g., <i>"taking a spoon"</i>). Our analysis shows that VMR performance drops by up to 40% when moving from captions to these realistic search distributions.
+    Standard VMR benchmarks like EpicKitchens or Charades use captions that describe every visual detail (e.g., <i>"The person picks up a silver spoon with their right hand from the wooden table"</i>). In contrast, search logs reveal that humans often use minimal, under-specified queries (e.g., <i>"taking a spoon"</i>). Our analysis shows that VMR performance drops by up to 40% when moving from captions to these realistic search distributions.
   </p>
 
   <h2 class="section-header">Automated Under-specification Pipeline</h2>
@@ -71,19 +72,27 @@ horizontal: false
     <div class="figure-caption">Our pipeline reduces caption complexity to match the linguistic distribution of real-world search logs.</div>
   </div>
 
-  <h2 class="section-header">Architectural Modifications</h2>
+<h2 class="section-header">Architectural Modifications</h2>
   <p class="content-text">
-    The primary issue identified in current DETR-based VMR models is an active decoder-query collapse, where only a small subset of the $K$ learnable queries meaningfully contributes to predictions. While this issue is known in object detection due to sparse supervision, in VMR it is exacerbated by the single-moment prior of existing benchmarks.
-    
-    Our proposed modifications target two specific types of collapse:
-    - **Self-Attention Removal (-SA):** We remove the self-attention mechanisms in the decoder to eliminate coordination collapse, where queries become overly synchronized and fail to independently specialize for different moments.
-    - **Decoder-Query Dropout (+QD):** We introduce a stochastic dropout regularizer for the decoder queries to prevent index collapse, encouraging the model to utilize a broader range of its available learnable queries.
-
-    Combined, these modifications effectively increase the number of active decoder queries, nearly doubling them in some cases and improving performance on search queries
+    We identify that current DETR-based VMR models suffer from <strong>active decoder-query collapse</strong>, where only a small subset of the $K$ learnable queries contributes to predictions. While common in object detection, this is exacerbated in VMR by the single-moment prior of existing benchmarks. Our modifications target two specific failure modes:
   </p>
+
+  <div style="margin-bottom: 1.5rem;">
+    <p class="content-text" style="margin-bottom: 0.5rem;">
+      <strong>Self-Attention Removal (-SA):</strong> We remove the self-attention mechanisms in the decoder to eliminate <i>coordination collapse</i>. This prevents queries from becoming overly synchronized, allowing them to independently specialize for different temporal moments.
+    </p>
+    <p class="content-text">
+      <strong>Decoder-Query Dropout (+QD):</strong> We introduce a stochastic dropout regularizer for the decoder queries to prevent <i>index collapse</i>. This forces the model to distribute information across a broader range of available learnable queries.
+    </p>
+  </div>
+
+  <p class="content-text">
+    Combined, these modifications—<strong>-SA+QD</strong>—effectively double the number of active decoder queries in some cases, significantly improving retrieval performance on under-specified search queries.
+  </p>
+
   <div class="figure-box">
     
-    <div class="figure-caption">Evaluated architectures include modified DETR-based and anchor-free models like Flash-VTG.</div>
+    <div class="figure-caption">Architectural changes to the DETR decoder to prevent query collapse and increase query diversity.</div>
   </div>
 
   <h2 class="section-header">Qualitative Results</h2>
@@ -99,11 +108,6 @@ Our qualitative analysis on the HD-EPIC-S2 and YC2-S benchmarks demonstrates tha
 
   <h2 id="bibliography" class="section-header">Bibliography</h2>
   <div class="bibtex-box">
-@inproceedings{pujol2026beyond,
-  title={Beyond Caption-Based Queries for Video Moment Retrieval},
-  author={Pujol-Perich, David and Clapés, Albert and Damen, Dima and Escalera, Sergio and Wray, Michael},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2026}
-}</div>
+  </div>
 
 </div>

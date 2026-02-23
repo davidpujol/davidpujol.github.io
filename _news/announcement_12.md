@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Finished my Master Thesis on efficient Transformer models.
+Finished my Master Thesis on efficient Transformer models. 🇨🇭

@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-One paper accepted to WACV 2025.
+One paper accepted to WACV 2025! :tada:
 

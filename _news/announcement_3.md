@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One paper accepted at WAIN 2021!
+One paper accepted at WAIN 2021! :tada:

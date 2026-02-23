@@ -10,12 +10,15 @@ profile:
   image_circular: false # crops the image to make it circular
 
 news: true  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
+latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-My name is David Pujol Perich, currently a Ph.D student at [Universitat de Barcelona](https://web.ub.edu/inici) under the supervision of Prof. [Sergio Escalera](https://scholar.google.com/citations?hl=en&user=oI6AIkMAAAAJ) and Prof. [Albert Clapés](https://scholar.google.com/citations?hl=en&user=n4BtpPsAAAAJ). My main research interests include computer vision, natural language processing and graph neural networks, especifically applied to video understanding applications.
+I am a PhD student at the [Universitat de Barcelona](https://web.ub.edu/inici), supervised by [Sergio Escalera](https://scholar.google.com/citations?hl=en&user=oI6AIkMAAAAJ) and [Albert Clapés](https://scholar.google.com/citations?hl=en&user=n4BtpPsAAAAJ). My research lies at the intersection of Computer Vision and Natural Language Processing, with a focus on making video understanding models more robust and efficient, with publications at top-tier conferences like CVPR, ICCV, ICLR, WACV, etc. 
 
-I obtained my Bachelors degree in Computer Science at [Universitat Politècnica de Catalunya (UPC)](https://www.upc.edu/en?set_language=en), which I combined with an academic stay at [ETHZ](https://ethz.ch/en.html), Switzerland. I also obtained my Masters Degree at UPC in Research and Innovation in Informatics with a strong focus on Advanced Computing. I also combined this program with a 1 year academic stay at [EPFL](https://www.epfl.ch/en/), Switzerland, where I undertook both courses on Deep Learning and wrote my Master Thesis under the supervision of Prof. [Volkan Cevher](https://scholar.google.com/citations?user=hlWhzU8AAAAJ&hl=en&oi=ao).
-During this time I also combined my studies with professional experience. First of all, I worked as a Machine Learning Research intern at [Barcelona Neural Networking Center](https://bnn.upc.edu/) during almost 2 years. I then worked at [LIONS](https://www.epfl.ch/labs/lions/), EPFL as a Machine Learning Research Assistant during 1 year.
+During my Ph.D. I have investigated the domain gap between descriptive captions and realistic user search queries (CVPR 2026), developed methods for parameter-efficient fine-tuning (ICCV 2025), addressed visual domain shifts (WACV 2025). Moreover, I recently completed a research stay at the [University of Bristol](https://www.bristol.ac.uk/) with Prof. [Dima Damen](https://scholar.google.com/citations?hl=en&user=OxL9Wn8AAAAJ) and Prof. [Michael Wray](https://scholar.google.com/citations?hl=en&user=gFQcKZMAAAAJ). 
+
+Previously, I earned my Master’s from [Universitat Politècnica de Catalunya (UPC)](https://www.upc.edu/en?set_language=en) and [EPFL](https://www.epfl.ch/about/), where I worked on efficient attention at [LIONS](https://www.epfl.ch/labs/lions/) with Prof. [Volkan Cevher](https://scholar.google.com/citations?user=hlWhzU8AAAAJ&hl=en&oi=ao). I also have a background in Graph Neural Networks resulting from working for 2 years at the [Barcelona Neural Networking Center](https://bnn.upc.edu/), where I engineered the IGNNITION framework (IEEE Network '21). 
+
+I am an invited lecturer for the Master of Computer Vision at UB and have received awards from SIGCOMM and the National Excellence Scholarship.

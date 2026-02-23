@@ -59,9 +59,9 @@ nav_order: 1
       <img src="{{ '/assets/img/publication_preview/topological_attention.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICLR 2024">
     </div>
     <div class="col-sm-9">
-      <div class="title font-weight-bold">Topological-Aware Attention for Scalable Transformers</div>
-      <div class="author"><strong>David Pujol-Perich</strong>, et al.</div>
-      <div class="periodical"><em>International Conference on Learning Representations (ICLR)</em>, 2024</div>
+      <div class="title font-weight-bold">Higher-order molecular learning: The cellular transformer</div>
+      <div class="author"><strong>Barsbey</strong>, et al.</div>
+      <div class="periodical"><em>International Conference on Learning Representations (ICLR)</em>, 2025</div>
       <div class="links">
         <a href="https://openreview.net/forum?id=..." class="btn btn-sm z-depth-0" role="button">Paper</a>
       </div>

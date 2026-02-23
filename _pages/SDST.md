@@ -44,7 +44,7 @@ horizontal: false
     <div class="venue" style="font-weight: 700; font-size: 1.4rem; color: #000; margin-top: 10px;">ICCV 2025</div>
     
     <div class="pill-links">
-      <a href="https://arxiv.org/abs/2507.07744">Paper (arXiv)</a>
+      <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Pujol-Perich_Sparse-Dense_Side-Tuner_for_efficient_Video_Temporal_Grounding_ICCV_2025_paper.pdf">Paper</a>
       <a href="https://github.com/davidpujol/sparse-dense-side-tuner">Code</a>
       <a href="#bibliography">BibTeX</a>
     </div>
@@ -57,23 +57,22 @@ horizontal: false
 
   <h2 class="section-header">Abstract</h2>
   <p class="content-text">
-    Video Temporal Grounding (VTG) requires models to localize specific moments in long videos based on natural language queries. While large-scale pre-trained models have set new benchmarks, fine-tuning them for VTG is computationally expensive. We propose the <strong>Sparse-Dense Side-Tuner</strong>, a parameter-efficient architecture that bridges the gap between high-level semantic features and dense temporal predictions. By training a lightweight side-network alongside a frozen backbone, we achieve state-of-the-art results while significantly reducing the number of trainable parameters and training time.
+    Video Temporal Grounding (VTG) involves Moment Retrieval (MR) and Highlight Detection (HD) based on textual queries. For this, most methods rely solely on final-layer features of frozen large pre-trained backbones, limiting their adaptability to new domains. While full fine-tuning is often impractical, parameter-efficient fine-tuning -- and particularly side-tuning (ST) -- has emerged as an effective alternative. However, prior ST approaches this problem from a frame-level refinement perspective, overlooking the inherent sparse nature of MR. To address this, we propose the Sparse-Dense Side-Tuner (SDST), the first anchor-free ST architecture for VTG. We also introduce the Reference-based Deformable Self-Attention, a novel mechanism that enhances the context modeling of the deformable attention -- a key limitation of existing anchor-free methods. Additionally, we present the first effective integration of InternVideo2 backbone into an ST framework, showing its profound implications in performance. Overall, our method significantly improves existing ST methods, achieving highly competitive or SOTA results on QVHighlights, TACoS, and Charades-STA, while reducing up to a 73% the parameter count w.r.t. the existing SOTA methods.
   </p>
 
-  <h2 class="section-header">Efficiency through Side-Tuning</h2>
+<h2 class="section-header">Efficiency through Sparse-Dense Side-Tuning</h2>
   <p class="content-text">
-    The core of our approach is the separation of the heavy feature extraction (frozen backbone) from the task-specific grounding logic (side-tuner). Unlike standard fine-tuning or simple adapters, our side-tuner utilizes a <strong>sparse-to-dense strategy</strong>: it selectively processes sparse temporal samples to capture global context before refining them into dense moment predictions. This allows the model to maintain the rich representations of the backbone while specializing for the high-precision requirements of temporal grounding.
+    We propose the <strong>first sparse-dense module for parameter-efficient video grounding</strong>. Our approach relies on <b>Side-Tuning</b>—a paradigm where the heavy video backbone remains completely frozen, and task-specific knowledge is learned through a lightweight parallel network. Unlike standard fine-tuning, which is computationally prohibitive, or traditional adapters that can still be memory-intensive, our side-tuner is specifically designed to be both <strong>time and memory efficient</strong>.
   </p>
-  
+
+  <p class="content-text">
+    The module employs a unique <strong>sparse-to-dense strategy</strong>: it first extracts a sparse set of global temporal features to understand the high-level video context, then selectively decodes these into dense moment-level predictions. This separation allows us to leverage the massive representational power of frozen foundation models while training only a fraction of the parameters, enabling state-of-the-art performance on consumer-grade hardware.
+  </p>
+
   <div class="figure-box">
     
-    <div class="figure-caption">Comparison between full fine-tuning and our Sparse-Dense Side-Tuning approach, highlighting the reduction in trainable parameters.</div>
+    <div class="figure-caption">Architecture of the Sparse-Dense Side-Tuner: By decoupling the sparse global context from dense temporal refinement, SDST achieves significant efficiency gains over full fine-tuning.</div>
   </div>
-
-  <h2 class="section-header">Sparsity vs. Density</h2>
-  <p class="content-text">
-    Temporal grounding is inherently multi-scale. A model must understand the global video structure (sparse) while precisely pinpointing start/end times (dense). Our architecture introduces a cross-attention mechanism that allows the side-tuner to query the frozen backbone at varying temporal resolutions. This dual-pathway ensures that the model remains efficient without sacrificing the granularity needed to distinguish between similar actions in a long sequence.
-  </p>
 
   <h2 class="section-header">Performance and Scalability</h2>
   <p class="content-text">

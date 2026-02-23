@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I started a PhD in Computer Vision under the supervision of Prof. Sergio Escalera at Universitat de Barcelona
+I started a PhD in Computer Vision under the supervision of Prof. Sergio Escalera and Prof. Albert Clapés at Universitat de Barcelona. 
