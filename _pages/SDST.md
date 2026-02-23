@@ -23,10 +23,32 @@ horizontal: false
   
   .section-header { font-size: 1.8rem; font-weight: 700; margin: 4rem 0 1.5rem; border-bottom: 2px solid #000; padding-bottom: 10px; }
   .content-text { font-size: 1.1rem; line-height: 1.8; color: #111; text-align: justify; margin-bottom: 1.5rem; }
-  
-  .figure-box { margin: 3rem 0; text-align: center; }
-  .figure-box img { max-width: 100%; height: auto; border-radius: 4px; }
-  .figure-caption { font-size: 0.95rem; color: #555; margin-top: 15px; font-style: italic; }
+.figure-box {
+    margin: 3rem auto;
+    text-align: center;
+    width: 100%; /* Ensures the container takes the full available width */
+    max-width: 900px; /* Limits the size on very large screens to keep it readable */
+  }
+
+  .figure-box img {
+    width: 100%;       /* Scalable width */
+    max-width: 100%;   /* Never wider than its container */
+    height: auto;      /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;    /* Center the image */
+    border-radius: 4px; /* Optional: matches the clean Hatano aesthetic */
+  }
+
+  .figure-caption {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 15px;
+    font-style: italic;
+    line-height: 1.5;
+    max-width: 800px;  /* Keeps captions from stretching too wide */
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   pre { background: #f4f4f4; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; border: 1px solid #ddd; }
 </style>
