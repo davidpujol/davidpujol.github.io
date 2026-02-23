@@ -1,7 +1,7 @@
 ---
 layout: page
-title: SADA:Semantic adversarial unsupervised domain adaptation for Temporal Action Localization
-permalink: /sada/
+title: Beyond Caption-Based Queries in Video Moment Retrieval
+permalink: /beyond-vmr/
 nav: false
 nav_order: 2
 display_categories: [work, fun]
@@ -10,8 +10,8 @@ horizontal: false
 
 <!-- pages/projects.md -->
 <div class="authors" style="text-align: center;">
-  <h4>David Pujol-Perich, Albert Clapés, and Sergio Escalera</h4>
-  <h4>University of Barcelona and Computer Vision Center, Spain</h4>
+  <h4>David Pujol-Perich, Albert Clapés, Dima Damen, Sergio Escalera and Michael Wray</h4>
+  <h4>University of Barcelona, Computer Vision Center and University of Bristol</h4>
 </div>
 <div class="row justify-content-center">
     <div class="col-sm-12">
