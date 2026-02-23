@@ -73,7 +73,13 @@ horizontal: false
 
   <h2 class="section-header">Architectural Modifications</h2>
   <p class="content-text">
-    We explore how modifications to the grounding mechanism—such as <strong>Adaptive Score Refinement (ASR)</strong> and multi-scale temporal modeling—affect the model's ability to handle semantic sparsity. We find that while these modifications improve standard VMR, they are insufficient for bridging the gap to under-specified queries, suggesting a need for better latent space alignment between sparse text and dense video features.
+    The primary issue identified in current DETR-based VMR models is an active decoder-query collapse, where only a small subset of the $K$ learnable queries meaningfully contributes to predictions. While this issue is known in object detection due to sparse supervision, in VMR it is exacerbated by the single-moment prior of existing benchmarks.
+    
+    Our proposed modifications target two specific types of collapse:
+    - **Self-Attention Removal (-SA):** We remove the self-attention mechanisms in the decoder to eliminate coordination collapse, where queries become overly synchronized and fail to independently specialize for different moments.
+    - **Decoder-Query Dropout (+QD):** We introduce a stochastic dropout regularizer for the decoder queries to prevent index collapse, encouraging the model to utilize a broader range of its available learnable queries.
+
+    Combined, these modifications effectively increase the number of active decoder queries, nearly doubling them in some cases and improving performance on search queries
   </p>
   <div class="figure-box">
     
@@ -82,8 +88,10 @@ horizontal: false
 
   <h2 class="section-header">Qualitative Results</h2>
   <p class="content-text">
-    Our qualitative analysis reveals that models often "over-fit" to descriptive words. For example, when "silver" is removed from a query, the model fails to localize the spoon entirely, even if the action remains clear. The following examples showcase the retrieval success and failure cases on our new HD-EPIC-S1/S2 benchmarks.
-  </p>
+Our qualitative analysis on the HD-EPIC-S2 and YC2-S benchmarks demonstrates that standard models like CG-DETR often fail to retrieve all relevant segments for under-specified queries because they only activate a few queries.
+- **Multi-Moment Coverage:** In scenarios with multiple ground-truth (GT) moments, the base model may only activate two queries to retrieve three moments.
+- **Improved Retrieval:** By removing self-attention and adding query dropout, our model activates a larger number of diverse queries, leading to significantly better coverage and localization of all valid video segments corresponding to a general search query like "Wash grapes" or "Add ingredients".
++1  </p>
   <div class="figure-box">
     
     <div class="figure-caption">Comparison of localized moments between caption-based and search-based queries.</div>
