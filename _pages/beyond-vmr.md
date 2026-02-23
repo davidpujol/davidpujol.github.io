@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Beyond Caption-Based Queries in Video Moment Retrieval
 permalink: /beyond-vmr/
 nav: false
 nav_order: 2
