@@ -13,26 +13,65 @@ horizontal: false
   <h4>David Pujol-Perich, Albert Clapés, and Sergio Escalera</h4>
   <h4>University of Barcelona and Computer Vision Center, Spain</h4>
 </div>
+<div class="row justify-content-center">
+    <div class="col-sm-12">
+      
+      <p class="text-center mt-3" style="font-size: 0.95rem; color: #444;">
+        <em>Current VMR models are trained on hyper-descriptive captions (left), but fail on realistic, under-specified user search queries (right). We bridge this gap with three new benchmarks.</em>
+      </p>
+    </div>
+  </div>
 
-<div class="projects">
-  <h2>Abstract</h2>
-  <p>Temporal Action Localization (TAL) is a complex task that poses relevant challenges, particularly when attempting to generalize on new -- unseen -- domains in real-world applications. These scenarios, despite realistic, are often neglected in the literature, exposing these solutions to important performance degradation. In this work, we tackle this issue by introducing, for the first time, an approach for Unsupervised Domain Adaptation (UDA) in sparse TAL, which we refer to as Semantic Adversarial unsupervised Domain Adaptation (SADA). Our contribution is threefold: (1) we pioneer the development of a domain adaptation model that operates on realistic sparse action detection benchmarks; (2) we tackle the limitations of global-distribution alignment techniques by introducing a novel adversarial loss that is sensitive to local class distributions, ensuring finer-grained adaptation; and (3) we present a novel experimental setup, based on EpicKitchens100, that evaluates multiple types of domain shifts in a comprehensive manner. Our experimental results indicate that SADA improves the adaptation across domains when compared to fully supervised state-of-the-art and alternative UDA methods, attaining a relative performance boost of up to $14\%$.</p>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h2 class="font-weight-bold">Abstract</h2>
+      <p style="text-align: justify; line-height: 1.7;">
+        Current Video Moment Retrieval (VMR) models are trained on videos paired with captions written by annotators after watching the video. This process induces a <strong>visual bias</strong>, leading to overly descriptive queries that significantly differ from real-world search behavior. We investigate the degradation of VMR methods on realistic queries and introduce three benchmarks: <strong>HD-EPIC-S1/S2, ANC-S, and YC2-S</strong>. We demonstrate that this performance gap is architecture-agnostic and show that fine-tuning with our generated queries significantly improves real-world generalization.
+      </p>
+    </div>
+  </div>
 
-  <h2>Overview</h2>
-  <h3>Addressing the problem of feature-misalignment with SADA loss</h3>
-  <p>Our work tackles the inherent challenges in Temporal Action Localization (TAL) within video understanding. TAL involves identifying actions in videos, yet variability in appearance and acquisition creates confusion between similar actions. Traditional supervised methods struggle with unseen data variations, resulting in performance declines. Our approach, Unsupervised Domain Adaptation (UDA), aims to bridge this gap by leveraging unlabelled data. However, existing methodologies align domain distributions globally, leading to feature misalignment. Our proposed adversarial loss overcomes this limitation by aligning each action's distribution across both domains, mitigating feature misalignment and enhancing performance.</p>
-<div class="image-caption" style="text-align: center; font-size: 80%;">
-  <img src="/assets/img/sada/sada_loss.png" alt="SADA loss">
-</div>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h2 class="font-weight-bold">The Under-specification Pipeline</h2>
+      <p>
+        We propose an automated pipeline that utilizes Large Language Models (LLMs) and dependency parsing to strip "visual bias" from captions. This preserves the core semantic intent while mimicking the sparsity of human search queries.
+      </p>
+      <div class="text-center py-3">
+        
+      </div>
+    </div>
+  </div>
 
-  <h3>Proposing a new set of benchmarking setups</h3>
-  <p>The current landscape lacks suitable benchmarks to evaluate methodologies in sparse detection for TAL. Existing benchmarks don't cover sparse detection or the simultaneous intersection of labels, crucial aspects in real-world video understanding. To address this inadequacy, we propose a comprehensive suite of 6 new benchmarks based on the EpicKitchens100 dataset. These benchmarks examine appearance and acquisition domain shifts, providing a nuanced evaluation of methodologies in handling real-world scenarios. Our proposed benchmarks aim to fill this gap, enabling a more accurate assessment of models' adaptability to diverse and challenging domains.</p>
-<div class="image-caption" style="text-align: center; font-size: 50%;">
-  <img src="/assets/img/sada/benchmarks.png" alt="New benchmarks">
-</div>
-  <h2>Code</h2>
-  <p>The implementation of this project is publicly available <a href="https://github.com/davidpujol/SADA">here</a>.</p>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h2 class="font-weight-bold">Is the Gap Architecture-Agnostic?</h2>
+      <p>
+        Yes. We evaluated both DETR-based and non-DETR models like <strong>Flash-VTG</strong>. Even models with multi-scale temporal modeling struggle with semantic sparsity, proving that the visual bias is a data distribution challenge rather than a decoder limitation.
+      </p>
+      
+    </div>
+  </div>
 
-  <h2>BibTeX</h2>
-  <p>Citation entry will be added soon...</p>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h2 class="font-weight-bold">User Realism Study</h2>
+      <p>
+        We conducted a study with 22 participants who rated our generated queries. Our HD-EPIC-S1 benchmark achieved a <strong>89% realism score</strong>, confirming that our automated pipeline effectively simulates actual user behavior.
+      </p>
+    </div>
+  </div>
+
+  <div class="row mt-5 mb-5" id="bibtex">
+    <div class="col-md-12">
+      <h2 class="font-weight-bold">BibTeX</h2>
+      <pre style="background: #f8f9fa; padding: 20px; border-radius: 8px; border: 1px solid #eee;"><code>@inproceedings{pujol2026beyond,
+  title={Beyond Caption-Based Queries for Video Moment Retrieval},
+  author={Pujol-Perich, David and Clapés, Albert and Damen, Dima and Escalera, Sergio and Wray, Michael},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}</code></pre>
+    </div>
+  </div>
+
 </div>
