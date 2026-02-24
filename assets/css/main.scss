@@ -18,3 +18,25 @@ $max-content-width: {{ site.max_width }};
   "font-awesome/solid",
   "font-awesome/regular"
 ;
+
+/* Constrain publication thumbnails so they don't explode on mobile */
+.publications .abbr img, .publications .teaser img {
+  max-width: 150px !important; /* Adjust this to your preferred thumbnail size */
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  .publications .abbr img {
+    max-width: 120px !important; /* Smaller thumbnails for mobile */
+  }
+}
+
+/* Prevent the profile image from taking over the screen on mobile */
+.profile img {
+  max-width: 200px !important; /* Forces a reasonable size */
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 auto;
+}
