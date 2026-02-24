@@ -27,16 +27,28 @@ $max-content-width: {{ site.max_width }};
   margin-bottom: 10px;
 }
 
-@media (max-width: 576px) {
-  .publications .abbr img {
-    max-width: 120px !important; /* Smaller thumbnails for mobile */
-  }
+/* Fix for the "About" profile picture */
+.profile img {
+  max-width: 200px !important; /* Prevents it from being too big on mobile */
+  height: auto;
+  margin: 0 auto;
 }
 
-/* Prevent the profile image from taking over the screen on mobile */
-.profile img {
-  max-width: 200px !important; /* Forces a reasonable size */
-  width: 100% !important;
-  height: auto !important;
-  margin: 0 auto;
+/* Fix for Publication thumbnails */
+.publications .abbr img {
+  max-width: 140px !important; /* Keeps CVPR/ICCV/ICLR icons consistent */
+  width: 100%;
+  height: auto;
+}
+
+/* Fix for Figure Boxes in Project Pages */
+.figure-box {
+  max-width: 850px; /* Clamps the width on desktop */
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.figure-box img {
+  width: 100%;
+  height: auto;
 }
