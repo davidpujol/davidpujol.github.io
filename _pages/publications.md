@@ -10,7 +10,7 @@ nav_order: 1
 <div class="publications">
 
   <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
-    <div class="col-4 col-sm-3">
+    <div class="col-sm-3">
       <img src="{{ '/assets/img/publication_preview/beyond_vmr.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="CVPR 2026" style="max-height: 120px; width: auto;">
     </div>
     <div class="col-sm-9">
@@ -26,7 +26,7 @@ nav_order: 1
   </div>
 
   <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
-    <div class="col-4 col-sm-3">
+    <div class="col-sm-3">
       <img src="{{ '/assets/img/publication_preview/sdst.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICCV 2025" style="max-height: 120px; width: auto;">
     </div>
     <div class="col-sm-9">
@@ -42,7 +42,7 @@ nav_order: 1
   </div>
 
   <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
-    <div class="col-4 col-sm-3">
+    <div class="col-sm-3">
       <img src="{{ '/assets/img/publication_preview/sada.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="WACV 2025" style="max-height: 120px; width: auto;">
     </div>
     <div class="col-sm-9">
@@ -58,7 +58,7 @@ nav_order: 1
   </div>
 
   <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
-    <div class="col-4 col-sm-3">
+    <div class="col-sm-3">
       <img src="{{ '/assets/img/publication_preview/cellular.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="ICLR 2024" style="max-height: 120px; width: auto;">
     </div>
     <div class="col-sm-9">
@@ -72,7 +72,7 @@ nav_order: 1
   </div>
 
   <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
-    <div class="col-4 col-sm-3">
+    <div class="col-sm-3">
       <img src="{{ '/assets/img/publication_preview/ignnition.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="IEEE Network 2021" style="max-height: 120px; width: auto;">
     </div>
     <div class="col-sm-9">
@@ -87,7 +87,7 @@ nav_order: 1
   </div>
 
   <div class="row" style="margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
-    <div class="col-4 col-sm-3">
+    <div class="col-sm-3">
       <img src="{{ '/assets/img/publication_preview/unveiling.png' | relative_url }}" class="img-fluid rounded z-depth-1" alt="WAIN 2021" style="max-height: 120px; width: auto;">
     </div>
     <div class="col-sm-9">
