@@ -19,12 +19,30 @@ $max-content-width: {{ site.max_width }};
   "font-awesome/regular"
 ;
 
-/* Constrain publication thumbnails so they don't explode on mobile */
+/* Fix for publication thumbnails stretching on mobile */
+.publications .abbr, .publications .teaser {
+  max-width: 140px !important; /* Forces the container size */
+  width: 100% !important;
+  display: block;
+  margin-bottom: 5px;
+}
+
 .publications .abbr img, .publications .teaser img {
-  max-width: 150px !important; /* Adjust this to your preferred thumbnail size */
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  width: 100% !important;
+  max-width: 120px !important; /* Limits the icon itself */
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ensure the text column doesn't overlap the image on narrow screens */
+@media (max-width: 576px) {
+  .publications .row .col-sm-2 {
+    display: flex;
+    justify-content: center;
+    max-width: 100% !important;
+    flex: 0 0 100%;
+  }
 }
 
 /* Fix for the "About" profile picture */
@@ -32,13 +50,6 @@ $max-content-width: {{ site.max_width }};
   max-width: 200px !important; /* Prevents it from being too big on mobile */
   height: auto;
   margin: 0 auto;
-}
-
-/* Fix for Publication thumbnails */
-.publications .abbr img {
-  max-width: 140px !important; /* Keeps CVPR/ICCV/ICLR icons consistent */
-  width: 100%;
-  height: auto;
 }
 
 /* Fix for Figure Boxes in Project Pages */
