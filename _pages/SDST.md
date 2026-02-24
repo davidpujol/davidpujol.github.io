@@ -67,7 +67,7 @@ horizontal: false
     
     <div class="pill-links">
       <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Pujol-Perich_Sparse-Dense_Side-Tuner_for_efficient_Video_Temporal_Grounding_ICCV_2025_paper.pdf">Paper</a>
-      <a href="https://github.com/davidpujol/sparse-dense-side-tuner">Code</a>
+      <a href="https://github.com/davidpujol/SDST">Code</a>
       <a href="#bibliography">BibTeX</a>
     </div>
   </div>
@@ -102,10 +102,11 @@ horizontal: false
   </p>
 
   <h2 id="bibliography" class="section-header">Bibliography</h2>
-  <pre><code>@inproceedings{pujolperich2025sparse,
-  title={Sparse-Dense Side-Tuner for Efficient Video Temporal Grounding},
-  author={Pujol-Perich, David and Escalera, Sergio and Clapés, Albert},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  <pre><code>@inproceedings{pujol2025sparse,
+  title={Sparse-dense side-tuner for efficient video temporal grounding},
+  author={Pujol-Perich, David and Escalera, Sergio and Clap{\'e}s, Albert},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={21515--21524},
   year={2025}
 }</code></pre>
 

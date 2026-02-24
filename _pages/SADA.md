@@ -98,12 +98,12 @@ Temporal Action Localization (TAL) is a complex task that poses relevant challen
   </div>
 
   <h2 id="bibliography" class="section-header">Bibliography</h2>
-  <pre><code>@InProceedings{Pujol-Perich_2025_WACV,
-    author    = {Pujol-Perich, David and Clap{\'e}s, Albert and Escalera, Sergio},
-    title     = {SADA: Semantic Adversarial Unsupervised Domain Adaptation for Temporal Action Localization},
-    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-    month     = {January},
-    year      = {2025}
+  <pre><code>@inproceedings{pujol2025sparse,
+  title={Sparse-dense side-tuner for efficient video temporal grounding},
+  author={Pujol-Perich, David and Escalera, Sergio and Clap{\'e}s, Albert},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={21515--21524},
+  year={2025}
 }</code></pre>
 
 </div>

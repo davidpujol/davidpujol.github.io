@@ -54,17 +54,16 @@ horizontal: false
   <div class="project-header">
     <h1 class="project-title">Beyond Caption-Based Queries for Video Moment Retrieval</h1>
     <div class="authors">
-      <strong>David Pujol-Perich</strong><sup>1</sup>, Albert Clapés<sup>1</sup>, Dima Damen<sup>2</sup>, Sergio Escalera<sup>1</sup>, Michael Wray<sup>2</sup>
+      <strong>David Pujol-Perich</strong><sup>1,2,3</sup>, Albert Clapés<sup>1,2</sup>, Dima Damen<sup>3</sup>, Sergio Escalera<sup>1,2</sup>, Michael Wray<sup>3</sup>
     </div>
     <div class="affiliations">
-      <sup>1</sup>University of Barcelona &nbsp;&nbsp; <sup>2</sup>University of Bristol
+      <sup>1</sup>University of Barcelona &nbsp;&nbsp;<sup>2</sup>Computer Vision Center &nbsp;&nbsp; <sup>3</sup>University of Bristol
     </div>
     <div class="venue" style="font-weight: 600; font-size: 1.3rem; color: #b31b1b; margin-top: 10px;">CVPR 2026</div>
     
     <div class="pill-links">
       <a href="#">Paper</a>
-      <a href="https://github.com/davidpujol/beyond-vmr">Code</a>
-      <a href="#">ArXiv</a>
+      <a href="#">Code</a>
       <a href="#bibliography">BibTeX</a>
     </div>
   </div>
@@ -88,7 +87,7 @@ In this work, we investigate the degradation of existing VMR methods, particular
 
   <h2 class="section-header">Automated Under-specification Pipeline</h2>
   <p class="content-text">
-    To simulate realistic user behavior without manual re-annotation, we propose an <strong>automated under-specification pipeline</strong>. By leveraging dependency parsing and LLM-driven pruning, we systematically remove visually biased modifiers (color, material, specific spatial relations) while preserving the core action-object intent.
+    To simulate realistic user behavior without manual re-annotation, we propose an <strong>automated under-specification pipeline</strong>. By leveraging an LLM-driven scheme, we systematically remove visually biased modifiers (color, material, specific spatial relations) while preserving the core action-object intent.
   </p>
   <div class="figure-box">
     <img src="/assets/img/beyond_vmr/pipeline.png" alt="Under-specification pipeline">
@@ -97,7 +96,7 @@ In this work, we investigate the degradation of existing VMR methods, particular
 
 <h2 class="section-header">Architectural Modifications</h2>
   <p class="content-text">
-    We identify that current DETR-based VMR models suffer from <strong>active decoder-query collapse</strong>, where only a small subset of the $K$ learnable queries contributes to predictions. While common in object detection, this is exacerbated in VMR by the single-moment prior of existing benchmarks. Our modifications target two specific failure modes:
+    We identify that current DETR-based VMR models suffer from <strong>active decoder-query collapse</strong>, where only a small subset of the learnable queries contributes to predictions. While common in object detection, this is exacerbated in VMR by the single-moment prior of existing benchmarks. Our modifications target two specific failure modes:
   </p>
 
   <div style="margin-bottom: 1.5rem;">
@@ -113,12 +112,20 @@ In this work, we investigate the degradation of existing VMR methods, particular
     Combined, these modifications—<strong>-SA+QD</strong>—effectively double the number of active decoder queries in some cases, significantly improving retrieval performance on under-specified search queries.
   </p>
 
-  <h2 class="section-header">Qualitative Results</h2>
+<h2 class="section-header">Qualitative Results</h2>
+<p class="content-text">
+  Our qualitative analysis on the <strong>HD-EPIC-S2</strong> and <strong>YC2-S</strong> benchmarks reveals that standard models like CG-DETR often struggle to retrieve all relevant segments for under-specified queries. This is primarily because these models only activate a limited number of queries, failing to capture the full temporal extent of the action.
+</p>
+
+<div style="margin-bottom: 2rem;">
+  <p class="content-text" style="margin-bottom: 0.8rem;">
+    <strong>Multi-Moment Coverage:</strong> In scenarios containing multiple ground-truth (GT) moments, base models typically suffer from query sparsity—for instance, activating only two queries to retrieve three distinct moments, leaving valid segments localized incorrectly or missed entirely.
+  </p>
   <p class="content-text">
-Our qualitative analysis on the HD-EPIC-S2 and YC2-S benchmarks demonstrates that standard models like CG-DETR often fail to retrieve all relevant segments for under-specified queries because they only activate a few queries.
-- **Multi-Moment Coverage:** In scenarios with multiple ground-truth (GT) moments, the base model may only activate two queries to retrieve three moments.
-- **Improved Retrieval:** By removing self-attention and adding query dropout, our model activates a larger number of diverse queries, leading to significantly better coverage and localization of all valid video segments corresponding to a general search query like "Wash grapes" or "Add ingredients".
-+1  </p>
+    <strong>Improved Retrieval Diversity:</strong> By removing self-attention and introducing query dropout (<strong>-SA+QD</strong>), our model encourages a larger number of diverse queries to activate. This leads to significantly better coverage and localization for general search queries such as <i>"Wash grapes"</i> or <i>"Add ingredients"</i>, where the model must identify multiple occurrences of the same action.
+  </p>
+</div>
+
   <div class="figure-box">
     <img src="/assets/img/beyond_vmr/qualitative_results.png" alt="Qualitative results for HD-EPIC-S1 and HD-EPIC-S3">
 
