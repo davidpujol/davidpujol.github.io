@@ -54,10 +54,13 @@ horizontal: false
   <div class="project-header">
     <h1 class="project-title">Beyond Caption-Based Queries for Video Moment Retrieval</h1>
     <div class="authors">
-      <strong>David Pujol-Perich</strong><sup>1,2,3</sup>, Albert Clapés<sup>1,2</sup>, Dima Damen<sup>3</sup>, Sergio Escalera<sup>1,2</sup>, Michael Wray<sup>3</sup>
+      <strong>David Pujol-Perich</strong><sup>1,2</sup>, Albert Clapés<sup>1,2</sup>, Dima Damen<sup>3</sup>, Sergio Escalera<sup>1,2</sup>, Michael Wray<sup>3</sup>
     </div>
     <div class="affiliations">
       <sup>1</sup>University of Barcelona &nbsp;&nbsp;<sup>2</sup>Computer Vision Center &nbsp;&nbsp; <sup>3</sup>University of Bristol
+    </div>
+    <div style="font-size: 1rem; color: #555; margin: 1.5rem 0 1rem; font-style: italic;">
+      <sup>*</sup>This work was partially done while in a research stay at the University of Bristol.
     </div>
     <div class="venue" style="font-weight: 600; font-size: 1.3rem; color: #b31b1b; margin-top: 10px;">CVPR 2026</div>
     
@@ -82,12 +85,12 @@ In this work, we investigate the degradation of existing VMR methods, particular
 
   <h2 class="section-header">Captions vs. Realistic Search Queries</h2>
   <p class="content-text">
-    Standard VMR benchmarks like EpicKitchens or Charades use captions that describe every visual detail (e.g., <i>"The person picks up a silver spoon with their right hand from the wooden table"</i>). In contrast, search logs reveal that humans often use minimal, under-specified queries (e.g., <i>"taking a spoon"</i>). Our analysis shows that VMR performance drops by up to 40% when moving from captions to these realistic search distributions.
+    Standard VMR benchmarks like HD-EPIC or Charades use captions that describe every visual detail (e.g., <i>"The person picks up a silver spoon with their right hand from the wooden table"</i>). In contrast, search logs reveal that humans often use minimal, under-specified queries (e.g., <i>"taking a spoon"</i>). Our analysis shows that VMR performance drops by up to 40% when moving from captions to these realistic search distributions. Importantly, existing benchmarks exhibit a <strong>single-moment prior</strong>: they predominantly contain queries that refer to a single moment in time. However, real-world search patterns frequently involve multi-moment queries where the same action occurs multiple times, exposing critical limitations in models trained exclusively on single-moment data.
   </p>
 
   <h2 class="section-header">Automated Under-specification Pipeline</h2>
   <p class="content-text">
-    To simulate realistic user behavior without manual re-annotation, we propose an <strong>automated under-specification pipeline</strong>. By leveraging an LLM-driven scheme, we systematically remove visually biased modifiers (color, material, specific spatial relations) while preserving the core action-object intent.
+    To simulate realistic user behavior without manual re-annotation, we propose an <strong>automated under-specification pipeline</strong> to create search-based benchmark variants (denoted with the suffix "-S"). By leveraging an LLM-driven scheme, we systematically remove visually biased modifiers (color, material, specific spatial relations) while preserving the core action-object intent. This approach allows us to generate under-specified search queries from existing caption-based datasets, enabling evaluation on realistic query distributions without costly manual annotation.
   </p>
   <div class="figure-box">
     <img src="/assets/img/beyond_vmr/pipeline.png" alt="Under-specification pipeline">
@@ -134,6 +137,13 @@ In this work, we investigate the degradation of existing VMR methods, particular
 
   <h2 id="bibliography" class="section-header">Bibliography</h2>
   <div class="bibtex-box">
+  @InProceedings{pujol2026beyond,
+  author    = {Pujol-Perich, David and Clapés, Albert and Damen, Dima and Escalera, Sergio and Wray, Michael},
+  title     = {Beyond Caption-Based Queries for Video Moment Retrieval},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026},
+  month     = {June}
+}
   </div>
 
 </div>
