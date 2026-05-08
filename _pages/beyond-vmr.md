@@ -65,8 +65,8 @@ horizontal: false
     <div class="venue" style="font-weight: 600; font-size: 1.3rem; color: #b31b1b; margin-top: 10px;">CVPR 2026</div>
     
     <div class="pill-links">
-      <a href="#">Paper</a>
-      <a href="#">Code</a>
+      <a href="https://arxiv.org/abs/2603.02363">Paper</a>
+      <a href="https://github.com/davidpujol/Beyond_Caption-Based_Queries_for_Video_Moment_Retrieval">Code</a>
       <a href="#bibliography">BibTeX</a>
     </div>
   </div>
